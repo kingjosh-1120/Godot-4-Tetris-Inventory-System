@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3ackrnty7mxm"]
+
+[ext_resource type="Texture2D" uid="uid://cauygv2aw58eb" path="res://pixil-frame-0 (3).png" id="1_5vcl7"]
+[ext_resource type="Script" path="res://inventory.gd" id="1_avbe8"]
+[ext_resource type="Script" path="res://EquipmentSlots.gd" id="2_kar7p"]
+[ext_resource type="Script" path="res://Backpack.gd" id="4_v4knr"]
+
+[node name="Inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_avbe8")
+
+[node name="InventoryBase" type="Panel" parent="."]
+modulate = Color(3.55, 5.33, 24.26, 0.35)
+layout_mode = 0
+offset_left = 52.0
+offset_top = 66.0
+offset_right = 1826.0
+offset_bottom = 978.0
+
+[node name="EquipmentSlots" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 1373.0
+offset_top = 164.0
+offset_right = 1787.0
+offset_bottom = 918.0
+script = ExtResource("2_kar7p")
+
+[node name="HEAD" type="Panel" parent="EquipmentSlots"]
+layout_mode = 0
+offset_left = 225.0
+offset_top = 84.0
+offset_right = 329.0
+offset_bottom = 198.0
+
+[node name="BODY" type="Panel" parent="EquipmentSlots"]
+layout_mode = 0
+offset_left = 181.0
+offset_top = 251.0
+offset_right = 369.0
+offset_bottom = 613.0
+
+[node name="HAND" type="Panel" parent="EquipmentSlots"]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 278.0
+offset_right = 149.0
+offset_bottom = 389.0
+
+[node name="Backpack" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 155.0
+offset_right = 530.0
+offset_bottom = 315.0
+texture = ExtResource("1_5vcl7")
+script = ExtResource("4_v4knr")
